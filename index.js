@@ -8,16 +8,16 @@ var message = '';
 var botAPIKey = %YOUR_BOTAPIKEY%;
 
 //Define phrase arrays for persons
-var igoryan = ["Симпотный.", "ЭмЗи.", "В каком году Шар поставили?", "Сколько тебе лет?", "Тебе скоро 31 год!"];
-var evgeniy = ["ГДЕ ФОТКИ???", "Приоритет поставь!", "Мааарииинаааа!", "Иди печеньки похавай.", "Обожаю бюджетников."];
-var enot = ["Ощущения ™.", "Прага.", "Эчпочмаки.", "Мазда 3.", "Шоб с блестяшками."];
-var roma = ["Вас понял.", "Два ремня.", "Толку от выборов?", "Светлейший лидер!", "Лучший фраг - тимкил!"];
-var artur = ["Не нервничай!!!", "Саундбар.", "Лего за дохуя денег.", "Мне лень.", "Б-га нет."];
-var vlad = ["Идём на бокс!", "Паляниця", "Ты плойку купил?", "Підстаркуваті", "Гарбузик."];
-var youmu = ["ЧСВ", "Все шуруй в Нир", "Говноеды", "Вы все говно.", "А я д'Артаньян!"];
-var alexei = ["Идём бухать.", "Шта?!", "Море? Какое море?", "Нет доказательств - нет дискуссии.", "Место под ещё одну фразу на которую у меня не хватило фантазии."];
-var forbidden = ["Русня!", "Дядя выбрал сторону. Я на другой стороне.", "Земля стекловатой.", "Ракеты НАТО в Крыму!", "Мышебратья."];
-var default_reply = ["Чё сказал?", "Вася", "Э, пасанчик", "Закройся", "Поговори мне тут", "Сыш!", "Слава роботам!", "Смерть человекам!", "Чё прицепился?", "Отвянь"];
+var trigger1 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+var trigger2 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+var trigger3 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+var trigger4 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+var trigger5 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+var trigger6 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+var trigger7 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+var trigger8 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+var trigger9 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+var default_reply = ["Text1", "Text2", "Text3", "Text4", "Text5"];
 
 
 exports.handler = function(event, context) {
@@ -26,41 +26,41 @@ exports.handler = function(event, context) {
     console.log("Context received:\n", JSON.stringify(context));
     message = event.message.text.toLowerCase();
     switch (message) {
-        case '/igoryan':
-        case '/igoryan@lolkek2_bot':
-            reply = igoryan[Math.floor(Math.random() * igoryan.length)];
+        case '/trigger1':
+        case '/trigger1@YOUR_TELEGRAM_bot':
+            reply = trigger1[Math.floor(Math.random() * trigger1.length)];
             break;
-        case '/evgeniy':
-        case '/evgeniy@lolkek2_bot':
-            reply = evgeniy[Math.floor(Math.random() * evgeniy.length)];
+        case '/trigger2':
+        case '/trigger2@YOUR_TELEGRAM_bot':
+            reply = trigger2[Math.floor(Math.random() * trigger2.length)];
             break;
-        case '/enot':
-        case '/enot@lolkek2_bot':
-            reply = enot[Math.floor(Math.random() * enot.length)];
+        case '/trigger3':
+        case '/trigger3@YOUR_TELEGRAM_bot':
+            reply = trigger3[Math.floor(Math.random() * trigger3.length)];
             break;
-        case '/roma':
-        case '/roma@lolkek2_bot':
-            reply = roma[Math.floor(Math.random() * roma.length)];
+        case '/trigger4':
+        case '/trigger4@YOUR_TELEGRAM_bot':
+            reply = trigger4[Math.floor(Math.random() * trigger4.length)];
             break;
-        case '/artur':
-        case '/artur@lolkek2_bot':
-            reply = artur[Math.floor(Math.random() * artur.length)];
+        case '/trigger5':
+        case '/trigger5@YOUR_TELEGRAM_bot':
+            reply = trigger5[Math.floor(Math.random() * trigger5.length)];
             break;
-        case '/vlad':
-        case '/vlad@lolkek2_bot':
-            reply = vlad[Math.floor(Math.random() * vlad.length)];
+        case '/trigger6':
+        case '/trigger6@YOUR_TELEGRAM_bot':
+            reply = trigger6[Math.floor(Math.random() * trigger6.length)];
             break;
-        case '/youmu':
-        case '/youmu@lolkek2_bot':
-            reply = youmu[Math.floor(Math.random() * youmu.length)];
+        case '/trigger7':
+        case '/trigger7@YOUR_TELEGRAM_bot':
+            reply = trigger7[Math.floor(Math.random() * trigger7.length)];
             break;
-        case '/alexei':
-        case '/alexei@lolkek2_bot':
-            reply = alexei[Math.floor(Math.random() * alexei.length)];
+        case '/trigger8':
+        case '/trigger8@YOUR_TELEGRAM_bot':
+            reply = trigger8[Math.floor(Math.random() * trigger8.length)];
             break;
-        case '/forbidden':
-        case '/forbidden@lolkek2_bot':
-            reply = forbidden[Math.floor(Math.random() * forbidden.length)];
+        case '/trigger9':
+        case '/trigger9@YOUR_TELEGRAM_bot':
+            reply = trigger9[Math.floor(Math.random() * trigger9.length)];
             break;
         default:
             reply = default_reply[Math.floor(Math.random() * default_reply.length)];
