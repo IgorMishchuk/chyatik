@@ -5,16 +5,16 @@ module.exports = {
         var message = event.message.text.toLowerCase();
         var querystring = require('querystring');
 		
-		//Define triggers and possible replies
-		var trigger1 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
-		var trigger2 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
-		var trigger3 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
-		var trigger4 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
-		var trigger5 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
-		var trigger6 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
-		var trigger7 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
-		var trigger8 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
-		var trigger9 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+	//Define triggers and possible replies
+	var trigger1 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+	var trigger2 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+	var trigger3 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+	var trigger4 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+	var trigger5 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+	var trigger6 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+	var trigger7 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+	var trigger8 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
+	var trigger9 = ["Text1", "Text2", "Text3", "Text4", "Text5"];
         var reply = '';
 
         switch (message) {
@@ -37,44 +37,44 @@ module.exports = {
                 \nText should not contain "*".\
                 \nNo verification if language of entered text is the same as selected for Polly';
                 break;
-			case '/trigger1':
-			case '/trigger1@YOUR_TELEGRAM_bot':
-				reply = trigger1[Math.floor(Math.random() * trigger1.length)]; //Randomly select which reply wtill be given from available variants
-				break;
-			case '/trigger2':
-			case '/trigger2@YOUR_TELEGRAM_bot':
-				reply = trigger2[Math.floor(Math.random() * trigger2.length)];
-				break;
-			case '/trigger3':
-			case '/trigger3@YOUR_TELEGRAM_bot':
-				reply = trigger3[Math.floor(Math.random() * trigger3.length)];
-				break;
-			case '/trigger4':
-			case '/trigger4@YOUR_TELEGRAM_bot':
-				reply = trigger4[Math.floor(Math.random() * trigger4.length)];
-				break;
-			case '/trigger5':
-			case '/trigger5@YOUR_TELEGRAM_bot':
-				reply = trigger5[Math.floor(Math.random() * trigger5.length)];
-				break;
-			case '/trigger6':
-			case '/trigger6@YOUR_TELEGRAM_bot':
-				reply = trigger6[Math.floor(Math.random() * trigger6.length)];
-				break;
-			case '/trigger7':
-			case '/trigger7@YOUR_TELEGRAM_bot':
-				reply = trigger7[Math.floor(Math.random() * trigger7.length)];
-				break;
-			case '/trigger8':
-			case '/trigger8@YOUR_TELEGRAM_bot':
-				reply = trigger8[Math.floor(Math.random() * trigger8.length)];
-				break;
-			case '/trigger9':
-			case '/trigger9@YOUR_TELEGRAM_bot':
-				reply = trigger9[Math.floor(Math.random() * trigger9.length)];
-				break;
-			default:
-				reply = '';
+            case '/trigger1':
+            case '/trigger1@YOUR_TELEGRAM_bot':
+		reply = trigger1[Math.floor(Math.random() * trigger1.length)]; //Randomly select which reply wtill be given from available variants
+		break;
+            case '/trigger2':
+            case '/trigger2@YOUR_TELEGRAM_bot':
+		reply = trigger2[Math.floor(Math.random() * trigger2.length)];
+		break;
+            case '/trigger3':
+            case '/trigger3@YOUR_TELEGRAM_bot':
+		reply = trigger3[Math.floor(Math.random() * trigger3.length)];
+		break;
+            case '/trigger4':
+            case '/trigger4@YOUR_TELEGRAM_bot':
+		reply = trigger4[Math.floor(Math.random() * trigger4.length)];
+		break;
+            case '/trigger5':
+            case '/trigger5@YOUR_TELEGRAM_bot':
+		reply = trigger5[Math.floor(Math.random() * trigger5.length)];
+		break;
+            case '/trigger6':
+            case '/trigger6@YOUR_TELEGRAM_bot':
+		reply = trigger6[Math.floor(Math.random() * trigger6.length)];
+		break;
+            case '/trigger7':
+            case '/trigger7@YOUR_TELEGRAM_bot':
+		reply = trigger7[Math.floor(Math.random() * trigger7.length)];
+		break;
+            case '/trigger8':
+            case '/trigger8@YOUR_TELEGRAM_bot':
+		reply = trigger8[Math.floor(Math.random() * trigger8.length)];
+		break;
+            case '/trigger9':
+            case '/trigger9@YOUR_TELEGRAM_bot':
+		reply = trigger9[Math.floor(Math.random() * trigger9.length)];
+		break;
+            default:
+		reply = '';
         }
         
         if (reply == ''){
