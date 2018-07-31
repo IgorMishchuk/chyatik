@@ -24,7 +24,7 @@ What you need for this to work:
 
 Deployment
 -----------
-1. Create S3 bucket which will be used by your Lambda function. Example uses eu-west-3 availability zone. Change line **72** of *speech.js* to fit your config;
+1. Create S3 bucket which will be used by your Lambda function.
 2. Create Lambda function:
 	- Runtime: Node.js 6.10;
 	- Roles should allow:
