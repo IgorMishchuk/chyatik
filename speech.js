@@ -69,7 +69,7 @@ module.exports = {
             var hash = require('crypto').createHash('md5').update(message + event.message.chat.id + Lang).digest('hex');
         
             //Build post data for Telegram API
-            var post_data = 'chat_id=' + event.message.chat.id + '&reply_to_message_id=' + event.message.message_id + '&audio=https://s3.eu-west-3.amazonaws.com/' + process.env.BUCKET_NAME + '/' + event.message.chat.id + '/' + hash + '.mp3';
+            var post_data = 'chat_id=' + event.message.chat.id + '&reply_to_message_id=' + event.message.message_id + '&audio=https://' + process.env.BUCKET_NAME + '.s3.amazonaws.com/' + event.message.chat.id + '/' + hash + '.mp3';
             
             //Post options for audio sending
             var post_options = {
