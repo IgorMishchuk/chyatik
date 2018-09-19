@@ -23,7 +23,7 @@ module.exports = {
                     var put_params = {  //Specify DynamoDB PutItem parameters
                         TableName: process.env.DB,
                         Item: {
-                            'Dname': {S: 'Enot'},
+                            'Dname': {S: 'Key_value'},
                             'Date': {S: new_date_entry},
                         }
                     };
@@ -176,7 +176,7 @@ module.exports = {
                 var put_params = {
                     TableName: process.env.DB,
                     Item: {
-                        'Dname': {S: 'Enot'},
+                        'Dname': {S: 'Key_value'},
                         'Date': {S: new_date_entry},
                     }
                 };
