@@ -64,7 +64,7 @@ exports.handler = function(event, context) {
         }
     }
     else if (event.message.text.toLowerCase() == 'trigger phrase'){ //If message is a defined trigger phrase
-        if (event.message.from.id == process.env.ENOT_HD || event.message.from.id == process.env.M_Z){  //If message came from specific user
+        if (event.message.from.id == process.env.USER1 || event.message.from.id == process.env.USER2){  //If message came from specific user
             console.log('DynamoDB entered');
             dynamo.dynamodb(event, context); //Send message to Dynamo function for processing
         }
