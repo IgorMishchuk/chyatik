@@ -3,18 +3,20 @@ Serverless Telegram bot
 
 Intro
 -----
-This serverless telegram bot was written as a part of self education during AWS Solutions Architect Assoiciate training courses. 
+This serverless telegram bot was written as a part of self education during AWS Solutions Architect Assoiciate and AWS Developer Associate training courses. 
 
 It uses next AWS services:
 1. [API Gateway](https://aws.amazon.com/api-gateway);
 2. [Lambda](https://aws.amazon.com/lambda/) (node.js 6.10);
 3. [S3](https://aws.amazon.com/s3/);
 4. [Polly](https://aws.amazon.com/polly/);
-5. [Cloudwatch](https://aws.amazon.com/cloudwatch/).
+5. [Cloudwatch](https://aws.amazon.com/cloudwatch/);
+6. [DynamoDB](https://aws.amazon.com/dynamodb/).
 
-At the moment, it has two functions:  
+At the moment, it has three functions:  
 1. Send received text to Polly and have it converted to speech. (speech.js)
 2. Process text not meant for conversion to speech. (texting.js)
+3. Calculate time difference between specific message and latest entry in DB (dynamo.js)
 
 Prerequisites
 -------------
@@ -31,12 +33,14 @@ Deployment
 		- Read\Write permissions to S3;
 		- Access to Polly;
 		- Access to Cloudwatch logs;
+		- Permissions for Query and PutItem for DynamoDB;
 	- Defite API Gateway as trigger;
-	- Import three files to Lambda:
+	- Import four files to Lambda:
 		- index.js
 		- speech.js
 		- texting.js
-	- Specify Environment variables for BOT_API_KEY and BUCKET_NAME;
+		- dynamo.js
+	- Specify Environment variables for BOT_API_KEY, BUCKET_NAME, DB and optionally CHAT1, TEST_CHAT, USER1 and USER2;
 	- Save created Lambda function.
 3. Deploy API gateway:
 	- Method "Post";
