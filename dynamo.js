@@ -9,7 +9,7 @@ module.exports = {
                 "#i" : "Dname"
             },
             ExpressionAttributeValues : {
-                ":name" : { "S" : "Enot"}   //Alias for partition key value
+                ":name" : { "S" : "Key_value"}   //Alias for partition key value
             },
             TableName : process.env.DB,
             KeyConditionExpression : "#i = :name",
