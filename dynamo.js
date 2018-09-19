@@ -100,7 +100,7 @@ module.exports = {
                 var db_epoch = time.getTime() + tz; //Conversion of ISO to epoch format. Correction for GMT+3
                 var db_time = new Date(db_epoch); //Conversion from epoch to ISO
                 //Calculate time diff
-                var diff = now_epoch - db_epoch; //Calculate time difference between message and latest entry n DB, in milliseconds
+                var diff = now_epoch - db_epoch; //Calculate time difference between message and latest entry in DB, in milliseconds
                 ////////////////////
                 var d_names = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"); //Array of week days
                 var curr_day = db_time.getDay(); //Get day number in a week
