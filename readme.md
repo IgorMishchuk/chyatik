@@ -49,6 +49,7 @@ Deployment
 	- Actions -> Deploy API; Invoke URL will be used for webhook from Telegram bot.
 4. Create a webhook from Telegram URL to **Invoke URL** of API gateway. [Webhook how-to](https://core.telegram.org/bots/api#setwebhook).
 5. [Configure](https://core.telegram.org/bots/inline) Bot to inline mode.
+6. Create DynamoDB table. Read\Write capacity depending on your needs. In my case 5 RCU\WCU is enough. Set string type for Partition key and Sort key. Partition key will store authorized user's name, sort key - message date.
 
 That's it, you're ready.
 *********
