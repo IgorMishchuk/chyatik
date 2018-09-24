@@ -30,7 +30,7 @@ Deployment
 2. Create DynamoDB table:
 	- Table name will be specified as Value for DB environmental variable;
 	- Primary key will contain name of person for whom we are calculating time difference. Key name will be used in Query and Put operations. In this example key name is "Dname". Set type to String;
-	- Sort key will contain date of message from target person. In this example key name is "Date". Set type to String.
+	- Sort key will contain date of message from target person. In this example key name is "Date". Set type to String;
 	- Untick "Use default settings";
 	- Untick Autoscaling for Read and Write capacity units;
 	- Set provisioned capacity to 5 for Read and Write capacity units. If you need more, please, check this [guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ProvisionedThroughput.html) for provisioned throughput calculation. Remember that DynamoDB is subject to [free tier](https://aws.amazon.com/dynamodb/pricing/) for 25 RCU/WCU.
