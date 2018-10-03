@@ -1,3 +1,4 @@
+# Code is being rewritten to split each module to separate Lambda function. Once done, repo will be updated.
 Serverless Telegram bot
 =======================
 
