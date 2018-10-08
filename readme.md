@@ -1,4 +1,6 @@
-# Code is being rewritten to split each module to separate Lambda function. Once done, repo will be updated.
+## Below is the old "meh" way. For new, shiny way check [new repo](https://github.com/IgorMishchuk/aws-demo-bot).
+---------
+
 Serverless Telegram bot
 =======================
 
